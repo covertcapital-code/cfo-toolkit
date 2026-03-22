@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Manage Cash Flow as a Small Business Owner — CFO in a Box</title>
+<meta name="description" content="You can be profitable on paper and still run out of money. Here's how to manage cash flow as a small business owner — practically, week to week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #1F3864;
+    --navy-deep:  #0F1E3A;
+    --navy-mid:   #2E5FA3;
+    --navy-light: #D6E4F0;
+    --gold:       #C9A84C;
+    --white:      #F8F9FC;
+    --muted:      #8A9BB5;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body:    'DM Sans', sans-serif;
+    --font-mono:    'DM Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy-deep);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(46,95,163,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(46,95,163,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(15,30,58,0.98), rgba(15,30,58,0));
+    backdrop-filter: blur(2px);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 600;
+    color: var(--white); text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-link {
+    font-size: 13px; font-weight: 400;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--gold); color: var(--navy-deep);
+    font-size: 13px; font-weight: 500;
+    padding: 10px 24px; border-radius: 2px;
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: #e0b94f; transform: translateY(-1px); }
+
+  /* ── Article hero ── */
+  .article-hero {
+    padding: 140px 0 60px;
+    position: relative; z-index: 1;
+    border-bottom: 1px solid rgba(46,95,163,0.2);
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+  .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 28px; flex-wrap: wrap;
+  }
+  .meta-tag {
+    font-family: var(--font-mono);
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.35);
+    padding: 4px 12px; border-radius: 2px;
+  }
+  .meta-date {
+    font-family: var(--font-mono);
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .meta-read {
+    font-family: var(--font-mono);
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .meta-dot { color: rgba(138,155,181,0.3); font-size: 10px; }
+
+  .article-title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 300; line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .article-title em { font-style: italic; color: var(--gold); }
+
+  .article-intro {
+    font-size: 19px; font-weight: 300;
+    color: rgba(248,249,252,0.75);
+    line-height: 1.65; max-width: 640px;
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+
+  /* ── Article body ── */
+  .article-body {
+    padding: 64px 0 80px;
+    position: relative; z-index: 1;
+  }
+
+  .article-body p {
+    font-size: 17px; font-weight: 300;
+    color: rgba(248,249,252,0.8);
+    line-height: 1.8; margin-bottom: 24px;
+  }
+
+  .article-body h2 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 300; line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin: 56px 0 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(46,95,163,0.25);
+  }
+  .article-body h2 em { font-style: italic; color: var(--gold); }
+
+  .article-body h3 {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 400;
+    color: var(--white); margin: 36px 0 12px;
+    letter-spacing: 0.01em;
+  }
+
+  .article-body strong {
+    font-weight: 500; color: var(--white);
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    margin: 44px 0;
+    padding: 28px 32px;
+    border-left: 3px solid var(--gold);
+    background: rgba(46,95,163,0.08);
+    border-radius: 0 4px 4px 0;
+  }
+  .pull-quote p {
+    font-family: var(--font-display);
+    font-size: 22px !important;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(248,249,252,0.9) !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Key concept box */
+  .concept-box {
+    margin: 36px 0;
+    padding: 24px 28px;
+    background: rgba(31,56,100,0.3);
+    border: 1px solid rgba(46,95,163,0.3);
+    border-radius: 3px;
+  }
+  .concept-box .concept-label {
+    font-family: var(--font-mono);
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px; display: block;
+  }
+  .concept-box p {
+    font-size: 15px !important;
+    color: rgba(248,249,252,0.7) !important;
+    margin-bottom: 0 !important;
+    line-height: 1.65 !important;
+  }
+
+  /* Numbered trap items */
+  .trap-item {
+    margin: 32px 0;
+    padding-left: 24px;
+    border-left: 1px solid rgba(46,95,163,0.3);
+  }
+  .trap-num {
+    font-family: var(--font-mono);
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 6px; display: block;
+  }
+  .trap-item h3 { margin-top: 0 !important; }
+
+  /* Horizontal rule */
+  .article-body hr {
+    border: none;
+    border-top: 1px solid rgba(46,95,163,0.2);
+    margin: 52px 0;
+  }
+
+  /* CTA box at end */
+  .article-cta {
+    margin-top: 52px;
+    padding: 32px 36px;
+    background: rgba(31,56,100,0.25);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-top: 2px solid var(--gold);
+    border-radius: 3px;
+  }
+  .article-cta p {
+    font-size: 15px !important;
+    color: rgba(248,249,252,0.7) !important;
+    margin-bottom: 16px !important;
+  }
+  .article-cta a {
+    display: inline-block;
+    background: var(--gold); color: var(--navy-deep);
+    font-size: 13px; font-weight: 500;
+    padding: 12px 28px; border-radius: 2px;
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .article-cta a:hover { background: #e0b94f; transform: translateY(-1px); }
+  .cta-label {
+    font-family: var(--font-mono);
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px; display: block;
+  }
+
+  /* ── Sidebar layout for wider screens ── */
+  @media (min-width: 1020px) {
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 64px;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .article-sidebar { padding-top: 4px; }
+    .container { max-width: 100%; padding: 0; }
+  }
+
+  /* Sidebar */
+  .sidebar-card {
+    position: sticky; top: 100px;
+    background: rgba(31,56,100,0.2);
+    border: 1px solid rgba(46,95,163,0.25);
+    border-radius: 3px; padding: 24px;
+    margin-bottom: 20px;
+  }
+  .sidebar-label {
+    font-family: var(--font-mono);
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px; display: block;
+  }
+  .sidebar-toc { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .sidebar-toc a {
+    font-size: 12px; color: var(--muted);
+    text-decoration: none; line-height: 1.4;
+    transition: color 0.2s;
+    display: block;
+    padding-left: 10px;
+    border-left: 1px solid rgba(46,95,163,0.2);
+  }
+  .sidebar-toc a:hover { color: var(--white); border-left-color: var(--gold); }
+
+  .sidebar-promo {
+    background: rgba(31,56,100,0.3);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-top: 2px solid var(--gold);
+    border-radius: 3px; padding: 24px;
+  }
+  .sidebar-promo .sidebar-label { color: var(--gold); }
+  .sidebar-promo h4 {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 300;
+    line-height: 1.2; margin-bottom: 10px;
+  }
+  .sidebar-promo h4 em { font-style: italic; color: var(--gold); }
+  .sidebar-promo p {
+    font-size: 12px; color: var(--muted);
+    line-height: 1.6; margin-bottom: 16px;
+  }
+  .sidebar-promo a {
+    display: block; text-align: center;
+    background: var(--gold); color: var(--navy-deep);
+    font-size: 12px; font-weight: 500;
+    padding: 11px 16px; border-radius: 2px;
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+  .sidebar-promo a:hover { background: #e0b94f; }
+  .sidebar-price {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 300;
+    color: var(--gold); margin-bottom: 8px;
+  }
+  .sidebar-price sup { font-size: 14px; }
+
+  /* ── More posts / footer area ── */
+  .more-posts {
+    padding: 60px 0;
+    border-top: 1px solid rgba(46,95,163,0.2);
+    position: relative; z-index: 1;
+  }
+  .more-label {
+    font-family: var(--font-mono);
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 32px; display: block;
+  }
+  .post-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .post-card {
+    background: rgba(31,56,100,0.15);
+    border: 1px solid rgba(46,95,163,0.2);
+    border-radius: 3px; padding: 24px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    display: block;
+  }
+  .post-card:hover { border-color: rgba(201,168,76,0.3); background: rgba(31,56,100,0.25); }
+  .post-card-tag {
+    font-family: var(--font-mono); font-size: 9px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px; display: block;
+  }
+  .post-card h3 {
+    font-family: var(--font-display);
+    font-size: 18px; font-weight: 300; line-height: 1.25;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .post-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .post-card-coming {
+    opacity: 0.45; cursor: default;
+  }
+  .post-card-coming:hover { border-color: rgba(46,95,163,0.2); background: rgba(31,56,100,0.15); }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(46,95,163,0.2);
+    position: relative; z-index: 1;
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 16px;
+  }
+  .footer-logo { font-family: var(--font-display); font-size: 18px; font-weight: 400; color: rgba(248,249,252,0.5); }
+  .footer-logo span { color: var(--gold); }
+  .footer-note { font-family: var(--font-mono); font-size: 10px; color: rgba(138,155,181,0.4); letter-spacing: 0.06em; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .article-hero .container { animation: fadeUp 0.8s ease both; }
+
+  @media (max-width: 700px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .post-cards { grid-template-columns: 1fr; }
+    .article-layout { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">CFO <span>in a Box</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="https://payhip.com/CFOinaBox" class="nav-cta" target="_blank">Get the Toolkit →</a>
+  </div>
+</nav>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <div class="container">
+    <div class="article-meta">
+      <span class="meta-tag">Cash Flow</span>
+      <span class="meta-dot">·</span>
+      <span class="meta-date">March 2025</span>
+      <span class="meta-dot">·</span>
+      <span class="meta-read">8 min read</span>
+    </div>
+    <h1 class="article-title">
+      How to Manage Cash Flow<br>
+      as a <em>Small Business Owner</em>
+    </h1>
+    <p class="article-intro">
+      You can be profitable on paper and still run out of money. It happens to small businesses every day — and cash flow management is the one skill that changes that.
+    </p>
+  </div>
+</div>
+
+<!-- ARTICLE BODY + SIDEBAR -->
+<div class="article-body">
+  <div class="article-layout">
+
+    <!-- MAIN CONTENT -->
+    <div class="article-main">
+
+      <p>You can be profitable on paper and still run out of money. It happens to small businesses every day — and it's one of the most disorienting things an owner can experience. The invoices are going out, the sales are coming in, and yet somehow the bank account keeps looking thin. If that sounds familiar, the problem almost certainly isn't your business model. It's your cash flow.</p>
+
+      <p>Cash flow management is the single most important financial skill a small business owner can develop. Not revenue growth. Not margin improvement. Not cost cutting. Those things matter — but none of them save you if you can't pay your suppliers, your staff, or your rent next month.</p>
+
+      <hr>
+
+      <h2 id="what-is-cashflow">What cash flow <em>actually</em> means</h2>
+
+      <p>Cash flow is the movement of money in and out of your business over a period of time. That's it. But the simplicity of the definition masks how complicated the reality can be.</p>
+
+      <div class="concept-box">
+        <span class="concept-label">Key distinction</span>
+        <p>Your P&L tells you whether your business is <strong>profitable</strong>. Your cash flow tells you whether your business can <strong>survive</strong>. A company with strong profit margins can still go under if its cash timing is off.</p>
+      </div>
+
+      <p>The number you're really watching is your <strong>closing cash balance</strong> at the end of each week or month. That's the number that tells you whether you can meet your obligations. Everything else — revenue, margins, EBITDA — is important context, but it won't save you if the closing balance hits zero.</p>
+
+      <hr>
+
+      <h2 id="common-traps">The most common <em>cash flow traps</em></h2>
+
+      <div class="trap-item">
+        <span class="trap-num">Trap 01</span>
+        <h3>Slow-paying customers</h3>
+        <p>Late payments are the single biggest cash flow killer for small businesses. You've done the work, issued the invoice, and recorded the revenue — but the cash hasn't arrived. Meanwhile your costs keep coming. If you're offering 30-day payment terms and customers are routinely paying at 45 or 60 days, you have a structural cash flow problem regardless of how profitable you are.</p>
+        <p>The fix: tighten your payment terms, invoice immediately on delivery, follow up on overdue invoices the day they're late, and consider offering a small early payment discount for customers who pay within 7 days.</p>
+      </div>
+
+      <div class="trap-item">
+        <span class="trap-num">Trap 02</span>
+        <h3>Seasonal revenue with fixed costs</h3>
+        <p>Many businesses have revenue that fluctuates significantly month to month while their cost base stays largely fixed — rent, payroll, software subscriptions, insurance. The months where revenue dips are fine when you've anticipated them. They're dangerous when you haven't.</p>
+        <p>The fix: model out your next 13 weeks at any given time. Seeing a potential cash shortfall 8 weeks away gives you time to act. Seeing it 8 days away gives you a crisis.</p>
+      </div>
+
+      <div class="trap-item">
+        <span class="trap-num">Trap 03</span>
+        <h3>Confusing profit with cash</h3>
+        <p>This is the trap most commonly set by growth. When your business is growing quickly, you may be booking revenue faster than you're collecting it. You may be investing in inventory or equipment ahead of the sales that will eventually pay for them. All of these decisions can be entirely correct strategically while simultaneously creating short-term cash pressure.</p>
+        <p>The fix: separate your P&L review from your cash flow review. Look at them as two distinct lenses on your business — both necessary, neither complete on its own.</p>
+      </div>
+
+      <div class="trap-item">
+        <span class="trap-num">Trap 04</span>
+        <h3>No cash buffer</h3>
+        <p>Operating without a cash buffer is like driving without a spare tyre. Things go wrong — a big customer pays late, an unexpected expense arrives, a supplier puts you on shorter payment terms. Without a buffer, any one of these events becomes a crisis. With one, it's an inconvenience.</p>
+        <p>The fix: decide on a minimum cash balance you're not willing to go below — typically one to two months of fixed costs — and treat it as untouchable.</p>
+      </div>
+
+      <hr>
+
+      <h2 id="week-to-week">How to manage it <em>week to week</em></h2>
+
+      <p>The businesses that manage cash flow well share one habit: they look at it regularly and they look <strong>ahead</strong>, not backwards.</p>
+
+      <div class="pull-quote">
+        <p>"Looking backwards means reviewing last month's bank statement. That tells you what happened. Looking ahead tells you what's coming — and gives you time to respond."</p>
+      </div>
+
+      <p>A practical 13-week cash flow model doesn't need to be complicated. At its core it tracks:</p>
+
+      <div class="concept-box">
+        <span class="concept-label">13-week model — core components</span>
+        <p><strong>Opening balance</strong> — what you're starting with<br>
+        <strong>Expected inflows</strong> — customer collections, any other income<br>
+        <strong>Expected outflows</strong> — payroll, rent, suppliers, fixed costs<br>
+        <strong>Closing balance</strong> — what you'll have at the end of the week</p>
+      </div>
+
+      <p>Do this for 13 weeks and you get a clear runway view. You can immediately see which weeks look tight, model what happens if a big customer pays late, and plan financing before you need it rather than when you're desperate for it.</p>
+
+      <p>The discipline is in updating it. Set aside 20 minutes every Monday morning to roll it forward, update actuals for last week, and refresh your assumptions. It becomes the most valuable 20 minutes of your financial week.</p>
+
+      <hr>
+
+      <h2 id="financing">When to seek <em>external financing</em></h2>
+
+      <p>Cash flow forecasting also tells you when to look for external support — and crucially, <em>when</em> to look for it. Lenders and credit facilities are easiest to access when you don't urgently need them.</p>
+
+      <p>If your 13-week model shows a potential gap in week 9, you have time to approach your bank, arrange a line of credit, or negotiate extended terms with a supplier from a position of strength. Waiting until you're in the gap means making decisions under pressure, often on worse terms. The forecast is what gives you the lead time to avoid that situation entirely.</p>
+
+      <hr>
+
+      <h2 id="bigger-picture">The <em>bigger picture</em></h2>
+
+      <p>Cash flow management isn't a finance department task — it's a leadership task. As a small business owner, having a clear view of your cash position is what gives you the confidence to make decisions: to hire, to invest, to take on a new customer, to turn down a bad one.</p>
+
+      <p>When you don't know your cash position, every decision carries more risk than it needs to. When you do, you can run your business with the kind of clarity and conviction that separates the owners who scale from the ones who stay stuck.</p>
+
+      <!-- CTA BOX -->
+      <div class="article-cta">
+        <span class="cta-label">Ready to get started?</span>
+        <p>The CFO in a Box 13-Week Cash Flow Forecaster is a professional Excel template built specifically for small business owners. Enter your numbers in the blue cells and it shows your weekly cash position, buffer status, and closing balance across the full 13 weeks — automatically.</p>
+        <a href="https://payhip.com/CFOinaBox" target="_blank">Get the full toolkit — $99 →</a>
+      </div>
+
+    </div><!-- /article-main -->
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <div class="sidebar-card">
+        <span class="sidebar-label">In this article</span>
+        <ul class="sidebar-toc">
+          <li><a href="#what-is-cashflow">What cash flow actually means</a></li>
+          <li><a href="#common-traps">The most common traps</a></li>
+          <li><a href="#week-to-week">How to manage it week to week</a></li>
+          <li><a href="#financing">When to seek financing</a></li>
+          <li><a href="#bigger-picture">The bigger picture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-promo">
+        <span class="sidebar-label">From CFO in a Box</span>
+        <div class="sidebar-price"><sup>$</sup>99</div>
+        <h4>CFO in a <em>Box</em></h4>
+        <p>Four professional Excel templates covering cash flow, KPIs, pricing, and budgeting. One-time purchase.</p>
+        <a href="https://payhip.com/CFOinaBox" target="_blank">Get the toolkit →</a>
+      </div>
+
+    </aside>
+
+  </div><!-- /article-layout -->
+</div><!-- /article-body -->
+
+<!-- MORE POSTS -->
+<div class="more-posts">
+  <div class="container-wide">
+    <span class="more-label">More from CFO in a Box</span>
+    <div class="post-cards">
+
+      <a href="#" class="post-card post-card-coming">
+        <span class="post-card-tag">Pricing · Coming soon</span>
+        <h3>Why Most Small Businesses Don't Know Their Real Profit Margins</h3>
+        <p>The difference between gross margin and net margin — and why it matters more than you think.</p>
+      </a>
+
+      <a href="#" class="post-card post-card-coming">
+        <span class="post-card-tag">Budgeting · Coming soon</span>
+        <h3>How to Build an Annual Budget That Actually Works</h3>
+        <p>Most budgets are out of date by February. Here's how to build one that stays useful all year.</p>
+      </a>
+
+      <a href="#" class="post-card post-card-coming">
+        <span class="post-card-tag">KPIs · Coming soon</span>
+        <h3>The Financial Reports Every Small Business Owner Should Be Running</h3>
+        <p>Five reports, how often to run them, and what to look for in each one.</p>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container-wide">
+    <div class="footer-inner">
+      <div class="footer-logo">CFO <span>in a Box</span></div>
+      <div class="footer-note">© 2025 · Professional Excel Templates for Small Business · All rights reserved</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for TOC links
+  document.querySelectorAll('.sidebar-toc a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Highlight active TOC item on scroll
+  const sections = document.querySelectorAll('h2[id]');
+  const tocLinks = document.querySelectorAll('.sidebar-toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    tocLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? '#C9A84C' : '';
+      a.style.borderLeftColor = a.getAttribute('href') === '#' + current ? '#C9A84C' : '';
+    });
+  });
+</script>
+
+</body>
+</html>
