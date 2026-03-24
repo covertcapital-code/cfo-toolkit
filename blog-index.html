@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — CFO in a Box | Small Business Finance Guides</title>
+<meta name="description" content="Practical finance guides for small business owners. Cash flow, profit margins, budgeting, pricing, and KPIs — written clearly, without the jargon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="blog-style.css">
+<style>
+  .blog-hero { padding: 140px 0 60px; position: relative; z-index: 1; border-bottom: 1px solid rgba(46,95,163,0.2); }
+  .blog-grid { padding: 64px 0 80px; position: relative; z-index: 1; }
+  .blog-posts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: rgba(46,95,163,0.15); border: 1px solid rgba(46,95,163,0.2); margin-top: 48px; }
+  .blog-post-card { background: var(--navy-deep); padding: 40px 36px; text-decoration: none; display: block; transition: background 0.2s; position: relative; overflow: hidden; }
+  .blog-post-card:hover { background: rgba(31,56,100,0.4); }
+  .blog-post-card::before { content: attr(data-num); position: absolute; right: 20px; bottom: -10px; font-family: var(--font-display); font-size: 100px; font-weight: 300; color: rgba(46,95,163,0.08); line-height: 1; pointer-events: none; }
+  .bp-tag { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.25); padding: 3px 10px; border-radius: 2px; display: inline-block; margin-bottom: 16px; }
+  .bp-title { font-family: var(--font-display); font-size: 26px; font-weight: 300; line-height: 1.15; color: var(--white); margin-bottom: 12px; letter-spacing: -0.01em; }
+  .bp-title em { font-style: italic; color: var(--gold); }
+  .bp-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+  .bp-meta { font-family: var(--font-mono); font-size: 10px; color: rgba(138,155,181,0.45); letter-spacing: 0.08em; }
+  .blog-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .blog-eyebrow-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 4px 12px; border-radius: 2px; }
+  .blog-eyebrow-line { height: 1px; width: 40px; background: rgba(201,168,76,0.3); }
+  @media (max-width: 700px) { .blog-posts { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">CFO <span>in a Box</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="blog-index.html" class="nav-link">Blog</a>
+    <a href="https://payhip.com/CFOinaBox" class="nav-cta" target="_blank">Get the Toolkit →</a>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="container">
+    <div class="blog-eyebrow">
+      <span class="blog-eyebrow-tag">CFO in a Box</span>
+      <span class="blog-eyebrow-line"></span>
+    </div>
+    <h1 class="article-title">Finance guides for<br><em>small business owners.</em></h1>
+    <p class="article-intro">Practical, jargon-free guides on cash flow, margins, budgeting, and pricing — written for people running businesses, not finance departments.</p>
+  </div>
+</div>
+
+<div class="blog-grid">
+  <div class="container-wide">
+    <div class="blog-posts">
+
+      <a href="blog.html" class="blog-post-card" data-num="01">
+        <span class="bp-tag">Cash Flow</span>
+        <h2 class="bp-title">How to Manage Cash Flow as a <em>Small Business Owner</em></h2>
+        <p class="bp-desc">You can be profitable on paper and still run out of money. Here's how to manage cash flow practically, week to week, with a 13-week rolling forecast.</p>
+        <div class="bp-meta">March 2025 · 8 min read</div>
+      </a>
+
+      <a href="blog-margins.html" class="blog-post-card" data-num="02">
+        <span class="bp-tag">Profit Margins</span>
+        <h2 class="bp-title">Why Most Small Businesses Don't Know Their <em>Real Profit Margins</em></h2>
+        <p class="bp-desc">Revenue is exciting. Profit margins are the truth. Here's why most owners get theirs wrong — and how to calculate the real number including overhead allocation.</p>
+        <div class="bp-meta">March 2025 · 9 min read</div>
+      </a>
+
+      <a href="blog-budget.html" class="blog-post-card" data-num="03">
+        <span class="bp-tag">Budgeting</span>
+        <h2 class="bp-title">How to Build an Annual Budget That <em>Actually Works</em></h2>
+        <p class="bp-desc">Most budgets are written in January and ignored by March. The problem isn't discipline — it's how they're built. Here's how to build one that stays useful all year.</p>
+        <div class="bp-meta">March 2025 · 8 min read</div>
+      </a>
+
+      <a href="blog-kpi.html" class="blog-post-card" data-num="04">
+        <span class="bp-tag">Financial Reports</span>
+        <h2 class="bp-title">The Financial Reports Every Small Business Owner Should Be <em>Running</em></h2>
+        <p class="bp-desc">Most owners run one report — the P&L — and wonder why they're still surprised by financial problems. Here are the five that give you the full picture.</p>
+        <div class="bp-meta">March 2025 · 9 min read</div>
+      </a>
+
+      <a href="blog-pricing.html" class="blog-post-card" data-num="05">
+        <span class="bp-tag">Pricing</span>
+        <h2 class="bp-title">How to Price Your Product or Service as a <em>Small Business Owner</em></h2>
+        <p class="bp-desc">Most small businesses underprice — not because they're generous, but because they don't know their real costs. Here's a practical framework for pricing properly.</p>
+        <div class="bp-meta">March 2025 · 10 min read</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container-wide">
+    <div class="footer-inner">
+      <div class="footer-logo">CFO <span>in a Box</span></div>
+      <div class="footer-note">© 2025 · Professional Excel Templates for Small Business · All rights reserved</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
